@@ -217,7 +217,7 @@ If a test complains about something, you should try your best to replicate the p
 <details>
   <summary>Why can't a single endpoint provide the data in the correct shape?</summary>
 
-As web developers, we often don't have control over our sources of data, and it's common to have to combine JSON from various sources into a data structure that works for the front-end. Even if the endpoints were under out control, and the back-end team were willing to build a new endpoint or improve the existing ones, bug fixes and features sometimes can't wait that long.
+As web developers, we often don't have control over our sources of data, and it's common to have to combine JSON from various sources into a data structure that works for the front-end. Even if the endpoints were under our control, and the back-end team were willing to build a new endpoint or improve the existing ones, bug fixes and features sometimes can't wait that long.
 
 </details>
 
