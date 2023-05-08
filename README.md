@@ -159,6 +159,13 @@ You submit via Codegrade. Check the assignment page on your learning platform.
 </details>
 
 <details>
+  <summary>I am getting errors when I run npm install or npm start. What is going on?</summary>
+
+This project requires Node correctly installed on your computer, in order to work. Your Orientation materials should have covered installation of Node. Sometimes Node can be installed but be mis-configured. If the errors persist, please request assistance from Staff.
+
+</details>
+
+<details>
   <summary>Do I need to install libraries or add scripts to the HTML?</summary>
 
 No. Everything you need should be installed already, including Axios.
