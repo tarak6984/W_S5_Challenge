@@ -187,13 +187,6 @@ This particular part of the product is a Single Page Application, so the HTML is
 </details>
 
 <details>
-  <summary>Why is my code inside index.js wrapped in an async function called sprintChallenge5?</summary>
-
-This way we can easily import your code as a single function in the `mvp.test.js` test suite. The export syntax is at the bottom of `index.js`, but this syntax does not work in the browser, only in the environment where the tests execute, which is Node. The function declaration is prefixed by the `async` keyword to allow you to use `await` inside it.
-
-</details>
-
-<details>
   <summary>How do I debug this project?</summary>
 
 Save your changes, and reload the site in Chrome. If you have a syntax error in your code, the app will crash and you will see errors in the Console. Put console logs before the crash site (error messages usually inform of the line where the crash is happening) and see if your variables contain the data you think they do.
@@ -246,6 +239,13 @@ Although a small, "old-fashioned" website might be made of just HTML, CSS and JS
   <summary>Is this how web projects are normally organized?</summary>
 
 Web projects can be organized in a million ways, there are no standards beyond the placement of configuration files, which typically live at the root. Some developers like it like this, while others prefer to use opinionated frameworks, which do a lot of magic but prescribe that folders and files be structured and named just so.
+
+</details>
+
+<details>
+  <summary>Why is my code inside index.js wrapped in an async function called sprintChallenge5?</summary>
+
+This way we can easily import your code as a single function in the `mvp.test.js` test suite. The export syntax is at the bottom of `index.js`, but this syntax does not work in the browser, only in the environment where the tests execute, which is Node. The function declaration is prefixed by the `async` keyword to allow you to use `await` inside it.
 
 </details>
 
