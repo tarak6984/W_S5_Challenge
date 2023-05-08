@@ -196,7 +196,7 @@ Execute `npm test` in your terminal. These are the same tests that execute insid
 <details>
   <summary>I believe my code is correct and the test is wrong. What do I do?</summary>
 
-Sometimes a test refuses to budge, even if (we think) our code is doing the right thing. Use CTRL-C to kill the tests, and then `npm test` to launch them again, just in case there is a problem with the test runner. More likely, there is a problem with your code. Try your best to reproduce the error by interacting with the site in Chrome. Do not code "to make the test happy". Code so that the browser does exactly what the mock does. The tests are there for confirmation.
+Sometimes a test refuses to budge, even if (we think) our code is doing the right thing. Use CTRL-C to kill the tests, and then `npm test` to launch them again, just in case there is a problem with the test runner. More likely, there is a problem with your code. Try your best to reproduce the error by interacting with the site in Chrome. Do not code "to make the test happy". Code so that the browser does exactly what the mock does. The tests are there for confirmation. If the problem persists, please request assistance from Staff.
 
 </details>
 
@@ -210,7 +210,7 @@ If a test complains about something, you should try your best to replicate the p
 <details>
   <summary>I messed up and want to start over! How do I do that?</summary>
 
-**Do NOT delete your repository from GitHub!** Instead, commit _frequently_ as you work. Make a commit whenever you achieve _anything_ and the app isn't crashing in Chrome. This in practice creates restore points you can use should you wreak havoc with your app. If you find yourself in a mess, use `git reset --hard` to simply discard all changes to your code since your last commit. If you are dead-set on restarting the challenge from scratch, you can do this with Git as well, but it is advised that you request assistance from staff.
+**Do NOT delete your repository from GitHub!** Instead, commit _frequently_ as you work. Make a commit whenever you achieve _anything_ and the app isn't crashing in Chrome. This in practice creates restore points you can use should you wreak havoc with your app. If you find yourself in a mess, use `git reset --hard` to simply discard all changes to your code since your last commit. If you are dead-set on restarting the challenge from scratch, you can do this with Git as well, but it is advised that you request assistance from Staff.
 
 </details>
 
