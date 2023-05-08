@@ -196,14 +196,14 @@ Execute `npm test` in your terminal. These are the same tests that execute insid
 <details>
   <summary>I believe my code is correct and the test is wrong. What do I do?</summary>
 
-Sometimes a test refuses to budge, even if (we think) our code is doing the right thing. Use CTRL-C to kill the tests, and then `npm test` to launch them again, just in case there was a problem with the test runner. More likely, there is a problem with your code. Try your best to reproduce the error by interacting with the site in Chrome. Do not code "to make the test happy". Code so that the browser does exactly what the mock does. The tests are there for confirmation.
+Sometimes a test refuses to budge, even if (we think) our code is doing the right thing. Use CTRL-C to kill the tests, and then `npm test` to launch them again, just in case there is a problem with the test runner. More likely, there is a problem with your code. Try your best to reproduce the error by interacting with the site in Chrome. Do not code "to make the test happy". Code so that the browser does exactly what the mock does. The tests are there for confirmation.
 
 </details>
 
 <details>
   <summary>The output of the test script is too overwhelming! What do I do?</summary>
 
-If a test complains about something, you should try your best to replicate the problem in Chrome. If you need to disable all tests except the one you are focused on, edit the `mvp.test.js` file and, as an example, change `test('👉 it works', () => { etc })` into `test.only('👉 it works', () => { etc })`. (Note the "only".) This won't affect Codegrade, because Codegrade runs its own version of the tests.
+If a test complains about something, you should try your best to replicate the problem in Chrome. If you need to disable all tests except the one you are focusing on, edit the `mvp.test.js` file and, as an example, change `test('👉 it works', () => { etc })` into `test.only('👉 it works', () => { etc })`. (Note the "only".) This won't affect Codegrade, because Codegrade runs its own version of the tests.
 
 </details>
 
