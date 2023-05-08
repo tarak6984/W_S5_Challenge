@@ -3,10 +3,10 @@ async function sprintChallenge5() {
   const currentYear = new Date().getFullYear()
   footer.textContent = `© BLOOM INSTITUTE OF TECHNOLOGY ${currentYear}`
 
-  // 👇 WORK WORK BELOW THIS LINE
+  // 👇 WORK WORK BELOW THIS LINE 👇
 
 
-  // 👆 WORK WORK ABOVE THIS LINE
+  // 👆 WORK WORK ABOVE THIS LINE 👆
 }
 
 // ❗ DO NOT CHANGE THE CODE BELOW
