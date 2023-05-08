@@ -99,9 +99,9 @@ Below, your Team Lead will discuss strategy and tactics for dealing with this ti
 
 Hey! Let's make sure you're up to speed with your **action items so far**.
 
-- [ ] The app is installed on your machine, with both `start` and `test` scripts running in terminals.
-- [ ] You studied the [mock](https://w-s5-challenge.herokuapp.com/) in the Elements tab of Dev Tools.
-- [ ] You saw how some text contents and some class names change as the user clicks around.
+- [x] The app is installed on your machine, with both `start` and `test` scripts running in terminals.
+- [x] You studied the [mock](https://w-s5-challenge.herokuapp.com/) in the Elements tab of Dev Tools.
+- [x] You saw how some text contents and some class names change as the user clicks around.
 
 Awesome! Our back-end engineer says that the JSON data needed to build the Learner Cards comes from two endpoints:
 
