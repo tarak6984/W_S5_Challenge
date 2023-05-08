@@ -166,7 +166,7 @@ No. Everything you need should be installed already, including Axios.
 </details>
 
 <details>
-  <summary>Why can't I edit the HTML and CSS files?</summary>
+  <summary>Why can't I edit the CSS file?</summary>
 
 The CSS is the domain of a different team, and in this particular project we're not supposed to touch it. Do not use inline styles to get around this! It will only make the CSS team angry. And believe me, you want them happy, as they can write CSS twenty times faster than you.
 
@@ -222,7 +222,7 @@ Although a small, "old-fashioned" website might be made of just HTML, CSS and JS
 </details>
 
 <details>
-  <summary>Is this how projects are normally organized?</summary>
+  <summary>Is this how Web projects are normally organized?</summary>
 
 Web projects can be organized freely in a million ways, there are no standards beyond the placement of configuration files, which typically live at the root. Some developers like it like this, while others prefer to use opinionated frameworks, which do a lot of magic but prescribe that folders and files be structured and named just so.
 
