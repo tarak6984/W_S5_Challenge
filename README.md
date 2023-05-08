@@ -67,10 +67,8 @@ My job assisting you with local setup of the app is done! You will speak to our 
 
 Below you will find information on how to approach the task.
 
-**[Watch video](http://wistia.com)**
-
 <details>
-  <summary>Click to read important information</summary>
+  <summary>Click to read</summary>
 
   ---
 
@@ -88,12 +86,14 @@ Fortunately, you have a very detailed mock that you can load in your browser and
 
 </details>
 
+**[Watch video](http://wistia.com)**
+
 ### 🥷 Lead Developer
 
 Below, your team lead will discuss strategy and tactics for dealing with this ticket.
 
 <details>
-  <summary>Click to read important information</summary>
+  <summary>Click to read</summary>
 
   ---
 
@@ -105,8 +105,8 @@ Hey there! Let's make sure you're up to speed on this project.
 
 Awesome! Our back-end engineer says that the data needed to build the Learner Cards comes from two endpoints:
 
-- [GET] http://localhost:3001/api/learners
-- [GET] http://localhost:3001/api/mentors
+- [GET] <http://localhost:3001/api/learners>
+- [GET] <http://localhost:3001/api/mentors>
 
 Make sure you have the `start` script running, or the endpoints won't work! You should try out the endpoints using Postman to see what they return.
 
@@ -145,6 +145,46 @@ It might seem like you need several click handlers on different elements, but th
 
 **[Watch video](http://wistia.com)**
 
-## Introduction
+## FAQ
 
-Submit your assignment to Codegrade.
+<details>
+  <summary>How do I submit this assignment?</summary>
+
+You submit via Codegrade. Check the assignment page on the learning platform.
+
+</details>
+
+<details>
+  <summary>Do I need to install libraries, or add scripts to the HTML?</summary>
+
+No. Everything you need should be installed already.
+
+</details>
+
+<details>
+  <summary>The output of the "test" script is too overwhelming! What do I do?</summary>
+
+If a test complains about something, you should try your best to replicate the problem in Chrome. If you need to disable all tests except the one you are focused on, edit the `mvp.test.js` file and, as an example, change `test('👉 it works!', () => {})` into `test.only('👉 it works!', () => {})`.
+
+</details>
+
+<details>
+  <summary>Why are there so many files in this project?</summary>
+
+Although a small, "old-fashined" website might be made of just HTML, CSS and JS files, these days we mostly manage projects with Node and its package manager, NPM. Besides, this project also includes a web server which makes it a little bit more complicated.
+
+</details>
+
+<details>
+  <summary>What is package.json and package-lock.json?</summary>
+
+The `package.json` file contains meta-information about the project like its version number, scripts that the developer can execute, and a list of the dependencies that will download when we execute `npm install`. There can be some wiggle room to allow newer versions of the declared dependencies to be installed, so the `package-lock.json` file makes sure the exact versions of everything are used.
+
+</details>
+
+<details>
+  <summary>What is package.json?</summary>
+
+This file contains meta-information about the project like its version number, scripts that the developer can execute, and a list of the dependencies that must be installed in order for a freshly cloned project may work.
+
+</details>
