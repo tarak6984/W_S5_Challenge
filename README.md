@@ -135,7 +135,7 @@ Make sure that each element you create uses the **exact same class names and tex
 
 As for interactivity, all the behaviors on the page as the user clicks on the cards boil down to **changes in text contents of some elements, and changes to some class names** which can be observed in the [mock](https://w-s5-challenge.herokuapp.com/). Do not use any other mechanisms!
 
-It might seem like you need several click handlers on different elements, but that would just make the code more complicated. Remember, events bubble up from the target towards its ancestor elements! It's easier to just attach an event listener on the card element, and then **check who's the target of the click before taking the appropriate action**.
+It might seem like you need several click handlers on different elements inside the card, but that would just make the code more complicated. Remember, events bubble up from the target to its ancestor elements! It's easier to just attach an event listener on the card element, and then **check who the target of the click is before taking the appropriate action**.
 
 ❗ Install the [Eslint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for VSCode. It will highlight syntax errors and problems right inside your editor.
 
@@ -180,6 +180,13 @@ This particular part of the product is a Single Page Application, so the HTML is
 </details>
 
 <details>
+  <summary>Why is my code inside index.js wrapped in an async function called sprintChallenge5?</summary>
+
+This way we can easily import your code as a single function in the `mvp.test.js` test suite. The export syntax is at the bottom of `index.js`, but this syntax does not work in the browser, only in the environment where the tests execute, which is Node. The function declaration is prefixed by the `async` keyword to allow you to use `await` inside it.
+
+</details>
+
+<details>
   <summary>How do I debug this project?</summary>
 
 Save your changes, and reload the site in Chrome. If you have a syntax error in your code, the app will crash and you will see errors in the Console. Put console logs before the crash site (error messages usually inform of the line where the crash is happening) and see if your variables contain the data you think they do.
@@ -217,14 +224,14 @@ If a test complains about something, you should try your best to replicate the p
 <details>
   <summary>Why are there so many files in this project?</summary>
 
-Although a small, "old-fashioned" website might be made of just HTML, CSS and JS files, these days we mostly manage projects with Node and its package manager, NPM. Node apps typically have a `package.json` file, and several other configuration files, at the root of the project. This project also includes automated tests and a web server, which adds a little bit of extra complexity and files.
+Although a small, "old-fashioned" website might be made of just HTML, CSS and JS files, these days we mostly manage projects with Node and its package manager, NPM. Node apps typically have a `package.json` file and several other configuration files placed at the root of the project. This project also includes automated tests and a web server, which adds a little bit of extra complexity and files.
 
 </details>
 
 <details>
-  <summary>Is this how Web projects are normally organized?</summary>
+  <summary>Is this how web projects are normally organized?</summary>
 
-Web projects can be organized freely in a million ways, there are no standards beyond the placement of configuration files, which typically live at the root. Some developers like it like this, while others prefer to use opinionated frameworks, which do a lot of magic but prescribe that folders and files be structured and named just so.
+Web projects can be organized in a million ways, there are no standards beyond the placement of configuration files, which typically live at the root. Some developers like it like this, while others prefer to use opinionated frameworks, which do a lot of magic but prescribe that folders and files be structured and named just so.
 
 </details>
 
@@ -238,13 +245,13 @@ The `package.json` file contains meta-information about the project like its ver
 <details>
   <summary>What is the .eslintrc.js file?</summary>
 
-This file works in combination with the Eslint extension for VSCode to highlight syntax errors and problems in your code. If a particular linting rule becomes annoying, it can be disabled using this file.
+This file works in combination with the Eslint extension for VSCode to highlight syntax errors and problems in your code. By editing this file you can customize your linting rules.
 
 </details>
 
 <details>
   <summary>What is Jest?</summary>
 
-Jest is a framework that allows to write tests and execute them, to alert you very quickly of problems with the code. Jest can do in seconds what an entire Quality Assurance team would take hours or even days. In the context of the Sprint Challenge, Jest is used to check your code against specification and give you a grade (% of tests passing).
+Jest is a framework that allows you to write tests and execute them, to alert you very quickly of problems with the code. Jest can do in seconds what an entire Quality Assurance team would take hours or even days. In the context of the Sprint Challenge, Jest is used to check your code against specification and give you a grade (% of tests passing).
 
 </details>
