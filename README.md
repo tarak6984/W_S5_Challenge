@@ -141,6 +141,8 @@ It might seem like you need several click handlers on different elements, but th
 
 ❗ Only make changes to the `frontend/index.js` file.
 
+Reach out if you get too stuck, and have fun!
+
   ---
 
 </details>
@@ -178,9 +180,37 @@ This particular part of the product is a Single Page Application, so the HTML is
 </details>
 
 <details>
-  <summary>The output of the "test" script is too overwhelming! What do I do?</summary>
+  <summary>How do I debug this project?</summary>
 
-If a test complains about something, you should try your best to replicate the problem in Chrome. If you need to disable all tests except the one you are focused on, edit the `mvp.test.js` file and, as an example, change `test('👉 it works!', () => {})` into `test.only('👉 it works!', () => {})`.
+Save your changes, and reload the site in Chrome. If you have a syntax error in your code, the app will crash and you will see errors in the Console. Put console logs before the crash site (error messages usually inform of the line where the crash is happening) and see if your variables contain the data you think they do.
+
+</details>
+
+<details>
+  <summary>How do I run tests against my code?</summary>
+
+Execute `npm test` in your terminal. These are the same tests that execute inside Codegrade. Although this never crossed your mind, tampering with the test file won't change your score, because Codegrade uses a pristine copy of the original test file, `mvp.test.js`.
+
+</details>
+
+<details>
+  <summary>I believe my code is correct and the test is wrong. What do I do?</summary>
+
+Sometimes a test refuses to budge, even if (we think) our code is doing the right thing. Use CTRL-C to kill the tests, and then `npm test` to launch them again, just in case there was a problem with the test runner. More likely, there is a problem with your code. Try your best to reproduce the error by interacting with the site in Chrome. Do not code "to make the test happy". Code so that the browser does exactly what the mock does. The tests are there for confirmation.
+
+</details>
+
+<details>
+  <summary>The output of the test script is too overwhelming! What do I do?</summary>
+
+If a test complains about something, you should try your best to replicate the problem in Chrome. If you need to disable all tests except the one you are focused on, edit the `mvp.test.js` file and, as an example, change `test('👉 it works', () => { etc })` into `test.only('👉 it works', () => { etc })`. (Note the "only".) This won't affect Codegrade, because Codegrade runs its own version of the tests.
+
+</details>
+
+<details>
+  <summary>I messed up and want to start over! How do I do that?</summary>
+
+**Do NOT delete your repository from GitHub!** Instead, commit _frequently_ as you work. Make a commit whenever you achieve _anything_ and the app isn't crashing in Chrome. This in practice creates restore points you can use should you wreak havoc with your app. If you find yourself in a mess, use `git reset --hard` to simply discard all changes to your code since your last commit. If you are dead-set on restarting the challenge from scratch, you can do this with Git as well, but it is advised that you request assistance from staff.
 
 </details>
 
@@ -188,6 +218,13 @@ If a test complains about something, you should try your best to replicate the p
   <summary>Why are there so many files in this project?</summary>
 
 Although a small, "old-fashioned" website might be made of just HTML, CSS and JS files, these days we mostly manage projects with Node and its package manager, NPM. Node apps typically have a `package.json` file, and several other configuration files, at the root of the project. This project also includes automated tests and a web server, which adds a little bit of extra complexity and files.
+
+</details>
+
+<details>
+  <summary>Is this how projects are normally organized?</summary>
+
+Web projects can be organized freely in a million ways, there are no standards beyond the placement of configuration files, which typically live at the root. Some developers like it like this, while others prefer to use opinionated frameworks, which do a lot of magic but prescribe that folders and files be structured and named just so.
 
 </details>
 
@@ -208,13 +245,6 @@ This file works in combination with the Eslint extension for VSCode to highlight
 <details>
   <summary>What is Jest?</summary>
 
-Jest is a framework that allows to write tests and execute them, to alert you very quickly of problems with the code. Jest can do in seconds what an entire Quality Assurance team would take hours. In the context of the Sprint Challenge, Jest is used to check your code against specification and give you a grade (% of tests passing).
-
-</details>
-
-<details>
-  <summary>Is this how projects are normally organized?</summary>
-
-Web projects can be organized freely in a million ways, there are no standards beyond the placement of configuration files, which typically live at the root. Some developers like it like this, while others prefer to use opinionated frameworks, which do a lot of magic but prescribe that folders and files be structured and named just so.
+Jest is a framework that allows to write tests and execute them, to alert you very quickly of problems with the code. Jest can do in seconds what an entire Quality Assurance team would take hours or even days. In the context of the Sprint Challenge, Jest is used to check your code against specification and give you a grade (% of tests passing).
 
 </details>
