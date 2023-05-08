@@ -28,15 +28,15 @@ Additionally, the following soft skills will greatly impact your performance:
 1. Perseverance. Keep trying until you figure it out!
 1. Patience. Make sure to read the entire README for important information.
 
-## Context
+## Instructions
 
 On your first day as a junior web developer at a coding school, you have been assigned a ticket to complete. The task involves adding a new feature to the school's software platform.
 
 Specifically, you need to complete a page that displays a list of learners along with their basic information such as ID, name, email, and a list of mentors. Users should be able to click on a learner to highlight it, and the list of mentors for each learner should be expandable and collapsible. You can refer to the [full mockup](https://w-s5-challenge.herokuapp.com/) for the design and behavior of the page.
 
-To help you complete the task, several members of your team will provide you with instructions and advice.
+**To help you complete the task, several members of your team will provide you with instructions and advice.**
 
-### 💾 DevOps
+### 💾 DevOps Engineer
 
 Below, your DevOps Engineer will help you set up your local environment and launch the project.
 
@@ -63,7 +63,7 @@ My job assisting you with local setup of the app is done! You will speak to our 
 
 **[Watch the video](http://wistia.com)**
 
-### 🎨 Designer
+### 🎨 Product Designer
 
 Below, you will find information on how to approach the task, from your Product Designer.
 
