@@ -215,6 +215,13 @@ If a test complains about something, you should try your best to replicate the p
 </details>
 
 <details>
+  <summary>Why can't a single endpoint provide the data in the correct shape?</summary>
+
+As web developers, we often don't have control over our sources of data, and it's common to have to combine JSON from various sources into a data structure that works for the front-end. Even if the endpoints were under out control, and the back-end team were willing to build a new endpoint or improve the existing ones, bug fixes and features sometimes can't wait that long.
+
+</details>
+
+<details>
   <summary>I messed up and want to start over! How do I do that?</summary>
 
 **Do NOT delete your repository from GitHub!** Instead, commit _frequently_ as you work. Make a commit whenever you achieve _anything_ and the app isn't crashing in Chrome. This in practice creates restore points you can use should you wreak havoc with your app. If you find yourself in a mess, use `git reset --hard` to simply discard all changes to your code since your last commit. If you are dead-set on restarting the challenge from scratch, you can do this with Git as well, but it is advised that you request assistance from Staff.
