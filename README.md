@@ -38,7 +38,7 @@ Specifically, you need to complete a page that displays a list of learners along
 
 ### 💾 DevOps Engineer
 
-Below, your DevOps Engineer will help you set up your local environment and launch the project.
+Below, your DevOps expert will help you set up your local environment and launch the project.
 
 <details>
   <summary>Click to read</summary>
