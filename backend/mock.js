@@ -15,8 +15,8 @@ function getMentors(req, res, ctx) {
 }
 
 const handlers = [
-  rest.get('http://localhost:3001/api/learners', getLearners),
-  rest.get('http://localhost:3001/api/mentors', getMentors),
+  rest.get('http://localhost:3003/api/learners', getLearners),
+  rest.get('http://localhost:3003/api/mentors', getMentors),
   rest.get('/api/learners', getLearners),
   rest.get('/api/mentors', getMentors),
 ]

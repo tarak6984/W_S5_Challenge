@@ -166,17 +166,7 @@ module.exports = {
 </head>
 
 <body>
-  <header>
-    <h1>Sprint 5 Challenge Submission</h1>
-    <h2>Learner Cards</h2>
-    <p class="info">Fetching learner cards...</p>
-  </header>
-  <section>
-    <div class="cards">
-      <!-- Learner cards are injected here by index.js script -->
-    </div>
-  </section>
-  <footer></footer>
+  <!-- body contents injected beforEach test -->
 </body>
 
 </html>

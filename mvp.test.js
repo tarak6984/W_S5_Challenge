@@ -9,8 +9,7 @@ const waitForOptions = { timeout: 150 } // so Codegrade does not take forever
 
 beforeAll(() => { server.listen() })
 afterAll(() => { server.close() })
-beforeEach(async () => { await sprintChallenge5() })
-afterEach(() => {
+beforeEach(async () => {
   document.querySelector('body').innerHTML = `
 <header>
   <h1>Sprint 5 Challenge Submission</h1>
@@ -22,8 +21,8 @@ afterEach(() => {
     <!-- Learner cards are injected here by index.js script -->
   </div>
 </section>
-<footer></footer>
-`
+<footer></footer>`
+  await sprintChallenge5()
 })
 
 async function firstCardRender() {

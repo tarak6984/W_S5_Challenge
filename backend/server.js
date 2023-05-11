@@ -4,7 +4,7 @@ const { learners, mentors } = require('./data')
 
 const delay = 500
 const server = express()
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3003
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, '../frontend')))
@@ -49,7 +49,7 @@ server.use((err, req, res, next) => { // eslint-disable-line
 server.listen(port, () => {
   console.log(`
 -------------------------------------------------------------------------
-See YOUR PROJECT in the browser, navigating to --> http://localhost:3001
+See YOUR PROJECT in the browser, navigating to --> http://localhost:3003
 
 See the live mock navigating to --> https://w-s5-challenge.herokuapp.com/
 -------------------------------------------------------------------------
