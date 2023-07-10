@@ -63,8 +63,6 @@ My job assisting you with local setup of the app is done! You will speak to our 
 
 </details>
 
-**[Watch the video](http://wistia.com)**
-
 ### 🎨 Product Designer
 
 **Below, you will find information on how to approach the task, from your Product Designer.**
@@ -87,8 +85,6 @@ Fortunately, you have [a very detailed mock](https://w-s5-challenge.herokuapp.co
   ---
 
 </details>
-
-**[Watch the video](http://wistia.com)**
 
 ### 🥷 Lead Developer
 
@@ -146,8 +142,6 @@ Reach out if you get too stuck, and have fun!
   ---
 
 </details>
-
-**[Watch the video](http://wistia.com)**
 
 ## FAQ
 
