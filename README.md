@@ -110,7 +110,7 @@ Awesome! Our back-end engineer says that the JSON data needed to build the Learn
 
 Here's the tricky thing: each learner has a short list of mentors, but the response from Endpoint A only identifies the mentors by their ID numbers. This means **you will need to match the mentor IDs from Endpoint A with the real names of the mentors, found in the response from Endpoint B**.
 
-For fetching, you can optionally use `Promise.all` to handle the requests. We do not need the data from request A in order to _start_ request B, so the requests can happen concurrently instead of back-to-back. **This will make the app feel faster** to the user!
+For fetching, just await the Axios request to Endpoint A, and then await the request to Endpoint B. (Optionally, you can use `Promise.all` to handle both requests. We do not need the data from request A in order to _start_ request B, so the requests can happen concurrently instead of back-to-back.)
 
 Once you have the payloads from Endpoints A and B stored inside variables, check that they match what you saw in Postman, and then **use your JavaScript skills to combine the two lists into a single data structure** that is comfortable to work with. Ideally, it would look something like this:
 

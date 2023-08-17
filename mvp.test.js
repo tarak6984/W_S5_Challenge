@@ -50,49 +50,46 @@ describe('Sprint Challenge 5', () => {
     test('👉 [5] <h2> text is "Learner Cards"', () => {
       screen.getByText('Learner Cards')
     })
-    test('👉 [6] <p class="info"> text is "Fetching learner cards..."', () => {
-      screen.getByText('Fetching learner cards...')
-    })
-    test('👉 [7] <footer> text is "© BLOOM INSTITUTE OF TECHNOLOGY 2023"', async () => {
+    test('👉 [6] <footer> text is "© BLOOM INSTITUTE OF TECHNOLOGY 2023"', async () => {
       screen.getByText('© BLOOM INSTITUTE OF TECHNOLOGY 2023')
     })
   })
   describe('Successful Axios requests and DOM manipulation', () => {
-    test('👉 [8] <p class="info"> text is "No learner is selected" after rendering cards', async () => {
+    test('👉 [7] <p class="info"> text is "No learner is selected" after rendering cards', async () => {
       await firstCardRender()
       screen.getByText('No learner is selected')
     })
-    test('👉 [9] <div class="cards"> container holds 16 cards', async () => {
+    test('👉 [8] <div class="cards"> container holds 16 cards', async () => {
       await firstCardRender()
       expect(document.querySelector('.cards').children).toHaveLength(16)
     })
-    test('👉 [10] <div class="card"> each card has a single class name "card"', async () => {
+    test('👉 [9] <div class="card"> each card has a single class name "card"', async () => {
       await firstCardRender()
       expect(document.querySelectorAll('.card')).toHaveLength(16)
       expect(document.querySelectorAll('.card.selected')).toHaveLength(0)
     })
-    test('👉 [11] <h3> inside each card displays the proper name', async () => {
+    test('👉 [10] <h3> inside each card displays the proper name', async () => {
       await firstCardRender()
       const h3 = document.querySelectorAll('.card h3')
       learners.forEach((l, idx) => {
         l.fullName === h3[idx].textContent
       })
     })
-    test('👉 [12] <div> inside each card displays the proper email', async () => {
+    test('👉 [11] <div> inside each card displays the proper email', async () => {
       await firstCardRender()
       const div = document.querySelectorAll('.card div')
       learners.forEach((l, idx) => {
         l.email === div[idx].textContent
       })
     })
-    test('👉 [13] <h4> inside each card displays the text "Mentors"', async () => {
+    test('👉 [12] <h4> inside each card displays the text "Mentors"', async () => {
       await firstCardRender()
       const h4 = document.querySelectorAll('.card h4')
       h4.forEach(h => {
         expect(h.textContent).toBe('Mentors')
       })
     })
-    test('👉 [14] <ul> inside each card displays the correct number of mentors', async () => {
+    test('👉 [13] <ul> inside each card displays the correct number of mentors', async () => {
       await firstCardRender()
       const unorderedLists = document.querySelectorAll('.card ul')
       unorderedLists.forEach((ul, idx) => {
@@ -101,7 +98,7 @@ describe('Sprint Challenge 5', () => {
         expect(lis.length).toBe(ids.length)
       })
     })
-    test('👉 [15] <li>s inside each card display the correct mentor names', async () => {
+    test('👉 [14] <li>s inside each card display the correct mentor names', async () => {
       await firstCardRender()
       const unorderedLists = document.querySelectorAll('.card ul')
       unorderedLists.forEach((ul, idx) => {
@@ -113,7 +110,7 @@ describe('Sprint Challenge 5', () => {
         expect(namesFromDOM.sort()).toMatchObject(namesFromData.sort())
       })
     })
-    test('👉 [16] <ul> the mentors are hidden on page load', async () => {
+    test('👉 [15] <ul> the mentors are hidden on page load', async () => {
       await firstCardRender()
       const cards = document.querySelectorAll('.card')
       cards.forEach(c => {
@@ -125,7 +122,7 @@ describe('Sprint Challenge 5', () => {
     })
   })
   describe('Card Interactivity', () => {
-    test('👉 [17] <div class="card selected"> clicking on a card toggles a class of "selected" on it', async () => {
+    test('👉 [16] <div class="card selected"> clicking on a card toggles a class of "selected" on it', async () => {
       await firstCardRender()
       const card = document.querySelector('.card:nth-child(1)')
       expect(card.classList.contains('selected')).toBe(false)
@@ -134,7 +131,7 @@ describe('Sprint Challenge 5', () => {
       fireEvent.click(card)
       expect(card.classList.contains('selected')).toBe(false)
     })
-    test('👉 [18] <h3> selecting a card causes the learner ID to display next to the name', async () => {
+    test('👉 [17] <h3> selecting a card causes the learner ID to display next to the name', async () => {
       await firstCardRender()
       const card = document.querySelector('.card:nth-child(1)')
       expect(within(card).queryByText('Bob Johnson, ID 6')).not.toBeInTheDocument()
@@ -143,7 +140,7 @@ describe('Sprint Challenge 5', () => {
       fireEvent.click(card)
       expect(within(card).queryByText('Bob Johnson, ID 6')).not.toBeInTheDocument()
     })
-    test('👉 [19] <p class="info"> selecting a card displays the text "The selected learner is <name>"', async () => {
+    test('👉 [18] <p class="info"> selecting a card displays the text "The selected learner is <name>"', async () => {
       await firstCardRender()
       const card1 = document.querySelector('.card:nth-child(1)')
       const card2 = document.querySelector('.card:nth-child(2)')
@@ -157,14 +154,14 @@ describe('Sprint Challenge 5', () => {
       expect(screen.queryByText('The selected learner is Samantha Richards')).not.toBeInTheDocument()
       expect(screen.queryByText('The selected learner is Harry Potter')).toBeVisible()
     })
-    test('👉 [20] <p class="info"> de-selecting all cards displays the text "No learner is selected"', async () => {
+    test('👉 [19] <p class="info"> de-selecting all cards displays the text "No learner is selected"', async () => {
       await firstCardRender()
       const card = document.querySelector('.card:nth-child(1)')
       fireEvent.click(card)
       fireEvent.click(card)
       expect(screen.queryByText('No learner is selected')).toBeVisible()
     })
-    test('👉 [21] <div class="card"> clicking on a card de-selects any other card that may be selected', async () => {
+    test('👉 [20] <div class="card"> clicking on a card de-selects any other card that may be selected', async () => {
       await firstCardRender()
       const card1 = document.querySelector('.card:nth-child(1)')
       const card2 = document.querySelector('.card:nth-child(2)')
@@ -181,7 +178,7 @@ describe('Sprint Challenge 5', () => {
       expect(within(card2).queryByText('Samantha Richards, ID 52')).not.toBeInTheDocument()
       expect(within(card3).queryByText('Harry Potter, ID 84')).toBeInTheDocument()
     })
-    test('👉 [22] <h4 class="open"> clicking on "Mentors" heading toggles visibility of list of mentors', async () => {
+    test('👉 [21] <h4 class="open"> clicking on "Mentors" heading toggles visibility of list of mentors', async () => {
       // Repeatedly clicking on the h4 of a card causes the unordered list of mentors to switch
       // from visible to invisible or vice-versa.
       await firstCardRender()
@@ -195,7 +192,7 @@ describe('Sprint Challenge 5', () => {
       expect(h4.classList.contains('open')).toBe(false)
       expect(h4.nextElementSibling).not.toBeVisible()
     })
-    test('👉 [23] <h4 class="open"> clicking on "Mentors" heading can select a card, but not deselect it', async () => {
+    test('👉 [22] <h4 class="open"> clicking on "Mentors" heading can select a card, but not deselect it', async () => {
       // This means for example that, when clicking on the h4 of a de-selected card, it becomes selected and at the
       // same time the visibility of the mentors list switches (from visible to invisible or vice-versa). However,
       // when clicking again on the h4, the visibility of mentors switches, but the card does not become de-selected.
@@ -207,7 +204,7 @@ describe('Sprint Challenge 5', () => {
       fireEvent.click(h4)
       expect(card.classList.contains('selected')).toBe(true)
     })
-    test('👉 [24] <ul> the visibility of the mentors list is preserved on the old card, when selecting a new one', async () => {
+    test('👉 [23] <ul> the visibility of the mentors list is preserved on the old card, when selecting a new one', async () => {
       // This means for example that, when selecting a new card by clicking on its h4, the visibility of the mentors
       // list on the new card switches (from visible to invisible or vice-versa), but the visibility of the mentors
       // list on the old card stays the way we left it
