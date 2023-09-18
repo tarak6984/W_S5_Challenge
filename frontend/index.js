@@ -1,4 +1,4 @@
-async function sprintChallenge5() { // Note the async keyword, in case you wish to use `await`
+async function sprintChallenge5() { // Note the async keyword, in case you wish to use `await` inside sprintChallenge5
   // 👇 WORK WORK BELOW THIS LINE 👇
 
   const footer = document.querySelector('footer')
