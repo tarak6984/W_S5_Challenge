@@ -56,7 +56,7 @@ async function sprintChallenge5() { // Note the async keyword, in case you wish 
       info.textContent = 'No learner is selected'
       // conditional logic
       if (!didClickTheMentors) {
-        // easy cases, no mentor involvement
+        // easy case, no mentor involvement
         if (!isCardSelected) {
           // selecting the card:
           card.classList.add('selected')
