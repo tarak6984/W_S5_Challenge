@@ -57,11 +57,7 @@ async function sprintChallenge5() { // Note the async keyword, in case you wish 
       // conditional logic
       if (!didClickTheMentors) {
         // easy cases, no mentor involvement
-        if (isCardSelected) {
-          // deselecting the currently selected card:
-          card.classList.remove('selected')
-          heading.textContent = learner.fullName
-        } else {
+        if (!isCardSelected) {
           // selecting the card:
           card.classList.add('selected')
           heading.textContent += `, ID ${learner.id}`
