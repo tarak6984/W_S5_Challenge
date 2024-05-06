@@ -42,7 +42,8 @@ async function sprintChallenge5() { // Note the async keyword so you can use `aw
 
     // 🧠 Flesh out the elements that describe each learner
     // ❗ Give the elements below their (initial) classes, textContent and proper nesting.
-    // ❗ Also, loop over the mentors inside the learner object, creating an <li> element.
+    // ❗ Do not change the variable names, as the code that follows depends on those names.
+    // ❗ Also, loop over the mentors inside the learner object, creating an <li> element for each mentor.
     // ❗ Fill each <li> with a mentor name, and append it to the <ul> mentorList.
     // ❗ Inspect the mock site closely to understand what the initial texts and classes look like!
 
