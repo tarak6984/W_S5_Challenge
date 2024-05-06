@@ -1,44 +1,62 @@
-async function sprintChallenge5() { // Note the async keyword, in case you wish to use `await` inside sprintChallenge5
-  // 👇 WORK WORK BELOW THIS LINE 👇
+async function sprintChallenge5() { // Note the async keyword so you can use `await` inside sprintChallenge5
+  // 👇 WORK ONLY BELOW THIS LINE 👇
+  // 👇 WORK ONLY BELOW THIS LINE 👇
+  // 👇 WORK ONLY BELOW THIS LINE 👇
 
-  const { data: learners } = await axios.get('http://localhost:3003/api/learners')
-  const { data: mentors } = await axios.get('http://localhost:3003/api/mentors')
+  // 👇 ==================== TASK 1 START ==================== 👇
 
+  // 🧠 Use Axios to GET learners and mentors.
+  // ❗ Use the variables `mentors` and `learners` to store the data.
+  // ❗ Use the await keyword when using axios.
+
+  let mentors = [] // fix this
+  let learners = [] // fix this
+
+  // 👆 ==================== TASK 1 END ====================== 👆
+
+  // 👇 ==================== TASK 2 START ==================== 👇
+
+  // 🧠 Combine learners and mentors.
+  // ❗ At this point the learner objects only have the mentors' IDs.
+  // ❗ Fix the `learners` array so that each learner ends up with this exact structure:
+  // {
+  //   id: 6,
+  //   fullName: "Bob Johnson",
+  //   email: "bob.johnson@example.com",
+  //   mentors: [
+  //     "Bill Gates",
+  //     "Grace Hopper"
+  //   ]`
+  // }
+
+  // 👆 ==================== TASK 2 END ====================== 👆
+
+  const cardsContainer = document.querySelector('.cards')
   const info = document.querySelector('.info')
   info.textContent = 'No learner is selected'
 
-  for (let learner of learners) {
-    const mentorIds = learner.mentors
-    const mentorNames = []
-    for (let id of mentorIds) {
-      for (let mentor of mentors) {
-        if (id === mentor.id) mentorNames.push(`${mentor.firstName} ${mentor.lastName}`)
-      }
-    }
-    learner.mentors = mentorNames
-  }
 
-  const cardsContainer = document.querySelector('.cards')
+  // 👇 ==================== TASK 3 START ==================== 👇
 
-  for (let learner of learners) {
+  for (let learner of learners) { // looping over each learner object
+
+    // 🧠 Flesh out the elements that describe each learner
+    // ❗ Give the elements below their (initial) classes, textContent and proper nesting.
+    // ❗ Also, loop over the mentors inside the learner object, creating an <li> element.
+    // ❗ Fill each <li> with a mentor name, and append it to the <ul> mentorList.
+    // ❗ Inspect the mock site closely to understand what the initial texts and classes look like!
+
     const card = document.createElement('div')
-    card.classList.add('card')
     const heading = document.createElement('h3')
-    heading.textContent = learner.fullName
-    card.appendChild(heading)
     const email = document.createElement('div')
-    email.textContent = learner.email
-    card.appendChild(email)
     const mentorsHeading = document.createElement('h4')
-    mentorsHeading.classList = 'closed'
-    mentorsHeading.textContent = 'Mentors'
-    card.appendChild(mentorsHeading)
     const mentorsList = document.createElement('ul')
-    for (let mentorName of learner.mentors) {
-      const li = document.createElement('li')
-      li.textContent = mentorName
-      mentorsList.appendChild(li)
-    }
+
+    // 👆 ==================== TASK 3 END ====================== 👆
+
+    // 👆 WORK ONLY ABOVE THIS LINE 👆
+    // 👆 WORK ONLY ABOVE THIS LINE 👆
+    // 👆 WORK ONLY ABOVE THIS LINE 👆
     card.appendChild(mentorsList)
     card.dataset.fullName = learner.fullName
     cardsContainer.appendChild(card)
@@ -83,10 +101,8 @@ async function sprintChallenge5() { // Note the async keyword, in case you wish 
   const footer = document.querySelector('footer')
   const currentYear = new Date().getFullYear()
   footer.textContent = `© BLOOM INSTITUTE OF TECHNOLOGY ${currentYear}`
-
-  // 👆 WORK WORK ABOVE THIS LINE 👆
 }
 
-// ❗ DO NOT CHANGE THE CODE  BELOW
+// ❗ DO NOT CHANGE THIS CODE. WORK ONLY INSIDE TASKS 1, 2, 3
 if (typeof module !== 'undefined' && module.exports) module.exports = { sprintChallenge5 }
 else sprintChallenge5()
