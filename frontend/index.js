@@ -11,7 +11,17 @@ async function sprintChallenge5() { // Note the async keyword so you can use `aw
 
   let mentors = [] // fix this
   let learners = [] // fix this
-
+  try {
+    const [mentorsRes, learnersRes] = await Promise.all([
+      axios.get('http://localhost:3003/api/mentors'),
+      axios.get('http://localhost:3003/api/learners')
+    ])
+    mentors = mentorsRes.data
+    learners = learnersRes.data
+  } 
+   catch (err) {
+    console.error('Error fetching data:', err)
+  }
   // 👆 ==================== TASK 1 END ====================== 👆
 
   // 👇 ==================== TASK 2 START ==================== 👇
@@ -28,6 +38,25 @@ async function sprintChallenge5() { // Note the async keyword so you can use `aw
   //     "Grace Hopper"
   //   ]`
   // }
+
+
+  // Loop through each learner and replace mentor IDs with actual mentor names
+  learners = learners.map(learner => {
+    // For each learner, convert their mentor IDs to mentor names
+    const mentorNames = learner.mentors.map(mentorId => {
+      // Find the mentor object that matches this ID
+      const mentor = mentors.find(m => m.id === mentorId)
+      // Return the mentor's name (firstName + lastName)
+      return `${mentor.firstName} ${mentor.lastName}`
+    })
+    
+    // Return the learner object with mentor names instead of IDs
+    return {
+      ...learner,
+      mentors: mentorNames
+    }
+  })
+
 
   // 👆 ==================== TASK 2 END ====================== 👆
 
@@ -52,6 +81,23 @@ async function sprintChallenge5() { // Note the async keyword so you can use `aw
     const email = document.createElement('div')
     const mentorsHeading = document.createElement('h4')
     const mentorsList = document.createElement('ul')
+
+
+    card.classList.add('card')
+     heading.textContent = learner.fullName
+    email.textContent = learner.email
+    email.classList.add('email')
+    mentorsHeading.textContent = 'Mentors'
+    mentorsHeading.classList.add('closed')
+
+        learner.mentors.forEach(name => {
+      const li = document.createElement('li')
+      li.textContent = name
+      mentorsList.appendChild(li)
+    })
+    card.appendChild(heading)
+    card.appendChild(email)
+    card.appendChild(mentorsHeading)
 
     // 👆 ==================== TASK 3 END ====================== 👆
 
